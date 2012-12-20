@@ -1,0 +1,8 @@
+id: 0.0
+name: Mike
+date: 2009-08-12T14:30:15.00-0400
+hex: 0x2a
+integer: 4711
+float: 3.14
+truth: true
+nada: nil

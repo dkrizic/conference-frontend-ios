@@ -1,0 +1,12 @@
+id: 0.0
+name: Mike
+date: 2009-08-12T14:30:15.00-0400
+notHex: 0xEX
+countries:
+  Finland: nice
+  Germany: very nice
+flavors:
+  ? 1 Strawberry
+  ? 2 Vanilla
+emptyArray: []
+emptyMap:   {}

@@ -1,0 +1,18 @@
+- id: +1
+  name: Mike
+  date: 2009-08-12T14:30:15.00-0400
+  countries:
+  - Finland
+  - Germany
+- id: -2
+  name: Chris
+  date: 2009-08-12T14:30:15.00-0400
+  country: 'Brasil'
+- id: 0xC
+  name: "Mike"
+  date: 2009-08-12 14:30:15.00-0400
+  country: Guatemala
+- id: 4.4
+  name: Joshi
+  date: 2009-08-12
+  country: France
