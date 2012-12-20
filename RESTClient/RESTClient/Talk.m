@@ -8,6 +8,7 @@
 
 #import "Talk.h"
 #import "Room.h"
+#import "Speaker.h"
 
 
 @implementation Talk
@@ -15,6 +16,6 @@
 @dynamic title;
 @dynamic start;
 @dynamic room;
-@dynamic speaker;
+@dynamic speakers;
 
 @end

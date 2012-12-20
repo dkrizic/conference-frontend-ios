@@ -9,21 +9,21 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Room;
+@class Room, Speaker;
 
 @interface Talk : NSManagedObject
 
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSDate * start;
 @property (nonatomic, retain) Room *room;
-@property (nonatomic, retain) NSSet *speaker;
+@property (nonatomic, retain) NSSet *speakers;
 @end
 
 @interface Talk (CoreDataGeneratedAccessors)
 
-- (void)addSpeakerObject:(NSManagedObject *)value;
-- (void)removeSpeakerObject:(NSManagedObject *)value;
-- (void)addSpeaker:(NSSet *)values;
-- (void)removeSpeaker:(NSSet *)values;
+- (void)addSpeakersObject:(Speaker *)value;
+- (void)removeSpeakersObject:(Speaker *)value;
+- (void)addSpeakers:(NSSet *)values;
+- (void)removeSpeakers:(NSSet *)values;
 
 @end

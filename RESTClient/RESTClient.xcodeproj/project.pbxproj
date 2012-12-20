@@ -10,8 +10,8 @@
 		03009A6A16833BE5007067C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03009A6916833BE5007067C2 /* CoreData.framework */; };
 		03009A6E16834E8F007067C2 /* ConferenceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03009A6C16834E8F007067C2 /* ConferenceModel.xcdatamodeld */; };
 		03009A7216835003007067C2 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 03009A7116835003007067C2 /* Room.m */; };
-		03009A78168351FA007067C2 /* Talk.m in Sources */ = {isa = PBXBuildFile; fileRef = 03009A77168351FA007067C2 /* Talk.m */; };
 		03009A7B16835211007067C2 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 03009A7A16835211007067C2 /* Speaker.m */; };
+		03009A7E168353F8007067C2 /* Talk.m in Sources */ = {isa = PBXBuildFile; fileRef = 03009A7D168353F8007067C2 /* Talk.m */; };
 		033184E9168281A600581D94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184E8168281A600581D94 /* UIKit.framework */; };
 		033184EB168281A600581D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EA168281A600581D94 /* Foundation.framework */; };
 		033184ED168281A600581D94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EC168281A600581D94 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -31,10 +31,10 @@
 		03009A6D16834E8F007067C2 /* ConferenceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConferenceModel.xcdatamodel; sourceTree = "<group>"; };
 		03009A7016835003007067C2 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		03009A7116835003007067C2 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
-		03009A76168351FA007067C2 /* Talk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Talk.h; sourceTree = "<group>"; };
-		03009A77168351FA007067C2 /* Talk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talk.m; sourceTree = "<group>"; };
 		03009A7916835211007067C2 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
 		03009A7A16835211007067C2 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		03009A7C168353F8007067C2 /* Talk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Talk.h; sourceTree = "<group>"; };
+		03009A7D168353F8007067C2 /* Talk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talk.m; sourceTree = "<group>"; };
 		033184E4168281A600581D94 /* RESTClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033184E8168281A600581D94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		033184EA168281A600581D94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,9 +71,9 @@
 		03009A6F16834FED007067C2 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				03009A7C168353F8007067C2 /* Talk.h */,
+				03009A7D168353F8007067C2 /* Talk.m */,
 				03009A6C16834E8F007067C2 /* ConferenceModel.xcdatamodeld */,
-				03009A76168351FA007067C2 /* Talk.h */,
-				03009A77168351FA007067C2 /* Talk.m */,
 				03009A7016835003007067C2 /* Room.h */,
 				03009A7116835003007067C2 /* Room.m */,
 				03009A7916835211007067C2 /* Speaker.h */,
@@ -210,8 +210,8 @@
 				03318505168281A600581D94 /* ViewController.m in Sources */,
 				03009A6E16834E8F007067C2 /* ConferenceModel.xcdatamodeld in Sources */,
 				03009A7216835003007067C2 /* Room.m in Sources */,
-				03009A78168351FA007067C2 /* Talk.m in Sources */,
 				03009A7B16835211007067C2 /* Speaker.m in Sources */,
+				03009A7E168353F8007067C2 /* Talk.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

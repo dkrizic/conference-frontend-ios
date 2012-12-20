@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize managedObjectContext, managedObjectModel, persistenceStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
