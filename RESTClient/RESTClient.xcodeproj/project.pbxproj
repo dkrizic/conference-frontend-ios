@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03009A6A16833BE5007067C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03009A6916833BE5007067C2 /* CoreData.framework */; };
 		033184E9168281A600581D94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184E8168281A600581D94 /* UIKit.framework */; };
 		033184EB168281A600581D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EA168281A600581D94 /* Foundation.framework */; };
-		033184ED168281A600581D94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EC168281A600581D94 /* CoreGraphics.framework */; };
+		033184ED168281A600581D94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EC168281A600581D94 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		033184F3168281A600581D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 033184F1168281A600581D94 /* InfoPlist.strings */; };
 		033184F5168281A600581D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 033184F4168281A600581D94 /* main.m */; };
 		033184F9168281A600581D94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 033184F8168281A600581D94 /* AppDelegate.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03009A6916833BE5007067C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		03009A6B16833BED007067C2 /* RESTClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RESTClient.entitlements; sourceTree = "<group>"; };
 		033184E4168281A600581D94 /* RESTClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033184E8168281A600581D94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		033184EA168281A600581D94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03009A6A16833BE5007067C2 /* CoreData.framework in Frameworks */,
 				033184E9168281A600581D94 /* UIKit.framework in Frameworks */,
 				033184EB168281A600581D94 /* Foundation.framework in Frameworks */,
 				033184ED168281A600581D94 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +77,7 @@
 		033184E7168281A600581D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03009A6916833BE5007067C2 /* CoreData.framework */,
 				033184E8168281A600581D94 /* UIKit.framework */,
 				033184EA168281A600581D94 /* Foundation.framework */,
 				033184EC168281A600581D94 /* CoreGraphics.framework */,
@@ -83,6 +88,7 @@
 		033184EE168281A600581D94 /* RESTClient */ = {
 			isa = PBXGroup;
 			children = (
+				03009A6B16833BED007067C2 /* RESTClient.entitlements */,
 				033184F7168281A600581D94 /* AppDelegate.h */,
 				033184F8168281A600581D94 /* AppDelegate.m */,
 				03318500168281A600581D94 /* MainStoryboard.storyboard */,
@@ -254,9 +260,11 @@
 		03318509168281A600581D94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RESTClient/RESTClient.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RESTClient/RESTClient-Prefix.pch";
 				INFOPLIST_FILE = "RESTClient/RESTClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -265,9 +273,11 @@
 		0331850A168281A600581D94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RESTClient/RESTClient.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RESTClient/RESTClient-Prefix.pch";
 				INFOPLIST_FILE = "RESTClient/RESTClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -292,6 +302,7 @@
 				0331850A168281A600581D94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
