@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RoomViewController.h
 //  RESTClient
 //
 //  Created by Darko Krizic on 2012-12-20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDataSource>
+@interface RoomViewController : UIViewController
 
 @end
