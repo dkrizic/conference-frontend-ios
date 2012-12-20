@@ -2,11 +2,11 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Room" representedClassName="Room" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="talks" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Talk" inverseName="room" inverseEntity="Talk" syncable="YES"/>
+        <relationship name="talks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Talk" inverseName="room" inverseEntity="Talk" syncable="YES"/>
     </entity>
     <entity name="Speaker" representedClassName="Speaker" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="talks" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Talk" inverseName="speakers" inverseEntity="Talk" syncable="YES"/>
+        <relationship name="talks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Talk" inverseName="speakers" inverseEntity="Talk" syncable="YES"/>
     </entity>
     <entity name="Talk" representedClassName="Talk" syncable="YES">
         <attribute name="start" optional="YES" attributeType="Date" syncable="YES"/>
@@ -15,8 +15,8 @@
         <relationship name="speakers" optional="YES" toMany="YES" minCount="1" maxCount="3" deletionRule="Nullify" destinationEntity="Speaker" inverseName="talks" inverseEntity="Speaker" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Room" positionX="160" positionY="231" width="128" height="73"/>
+        <element name="Room" positionX="160" positionY="231" width="128" height="75"/>
+        <element name="Speaker" positionX="-216" positionY="258" width="128" height="75"/>
         <element name="Talk" positionX="-11" positionY="66" width="128" height="103"/>
-        <element name="Speaker" positionX="-216" positionY="258" width="128" height="73"/>
     </elements>
 </model>
