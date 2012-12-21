@@ -40,22 +40,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"TalkEntry"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TalksEntry" forIndexPath:indexPath];
     cell.textLabel.text = @"Das Leben des Perff";
     cell.detailTextLabel.text = @"Darko Krizic, Ballsaal";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//        [segue destinationViewController];
-//    }
-//}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"showDetail" sender:indexPath];
-}
 @end

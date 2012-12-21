@@ -40,9 +40,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"room"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SpeakersEntry" forIndexPath:indexPath];;
     cell.textLabel.text = @"Darko Krizic";
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.detailTextLabel.text = @"1";
     return cell;
 }
 @end
