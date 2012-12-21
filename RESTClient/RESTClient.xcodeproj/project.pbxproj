@@ -44,6 +44,7 @@
 		033184FF168281A600581D94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033184FE168281A600581D94 /* Default-568h@2x.png */; };
 		03318502168281A600581D94 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03318500168281A600581D94 /* MainStoryboard.storyboard */; };
 		03318505168281A600581D94 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03318504168281A600581D94 /* MainViewController.m */; };
+		036BDFC6168502D600FE2CC4 /* TalkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036BDFC5168502D600FE2CC4 /* TalkDetailViewController.m */; };
 		039DFD2D1683D8B100E1793F /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD2C1683D8B100E1793F /* RoomViewController.m */; };
 		039DFD66168465F400E1793F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD65168465F400E1793F /* SettingsViewController.m */; };
 		039DFD6A1684B26600E1793F /* SpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD691684B26600E1793F /* SpeakerViewController.m */; };
@@ -115,6 +116,8 @@
 		03318501168281A600581D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		03318503168281A600581D94 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		03318504168281A600581D94 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		036BDFC4168502D600FE2CC4 /* TalkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkDetailViewController.h; sourceTree = "<group>"; };
+		036BDFC5168502D600FE2CC4 /* TalkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkDetailViewController.m; sourceTree = "<group>"; };
 		039DFD2B1683D8B100E1793F /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		039DFD2C1683D8B100E1793F /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
 		039DFD64168465F400E1793F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -295,6 +298,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		036BDFC11685025600FE2CC4 /* TalkDetail */ = {
+			isa = PBXGroup;
+			children = (
+				036BDFC4168502D600FE2CC4 /* TalkDetailViewController.h */,
+				036BDFC5168502D600FE2CC4 /* TalkDetailViewController.m */,
+			);
+			name = TalkDetail;
+			sourceTree = "<group>";
+		};
 		039DFD2A1683D88E00E1793F /* Room */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +337,7 @@
 		039DFD6B1684B2B900E1793F /* Talk */ = {
 			isa = PBXGroup;
 			children = (
+				036BDFC11685025600FE2CC4 /* TalkDetail */,
 				039DFD6D1684F34700E1793F /* TalkViewController.h */,
 				039DFD6E1684F34700E1793F /* TalkViewController.m */,
 			);
@@ -475,6 +488,7 @@
 				039DFD66168465F400E1793F /* SettingsViewController.m in Sources */,
 				039DFD6A1684B26600E1793F /* SpeakerViewController.m in Sources */,
 				039DFD6F1684F34700E1793F /* TalkViewController.m in Sources */,
+				036BDFC6168502D600FE2CC4 /* TalkDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

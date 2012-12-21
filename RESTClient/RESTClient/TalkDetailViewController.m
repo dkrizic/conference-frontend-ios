@@ -1,18 +1,18 @@
 //
-//  RoomViewController.m
+//  TalkDetailViewController.m
 //  RESTClient
 //
 //  Created by Darko Krizic on 2012-12-21.
 //  Copyright (c) 2012 Darko Krizic. All rights reserved.
 //
 
-#import "RoomViewController.h"
+#import "TalkDetailViewController.h"
 
-@interface RoomViewController ()
+@interface TalkDetailViewController ()
 
 @end
 
-@implementation RoomViewController
+@implementation TalkDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,19 +35,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-        return 1;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"room"];
-    cell.textLabel.text = @"Ballsaal";
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"room"];
+    cell.textLabel.text = @"Das Leben des Perff";
+    cell.detailTextLabel.text = @"Darko Krizic, Ballsaal";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        [segue destinationViewController];
+    }
 }
 
 @end

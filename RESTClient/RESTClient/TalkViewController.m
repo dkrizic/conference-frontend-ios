@@ -43,8 +43,15 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"room"];
     cell.textLabel.text = @"Das Leben des Perff";
     cell.detailTextLabel.text = @"Darko Krizic, Ballsaal";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        [segue destinationViewController];
+    }
+}
 
 @end
