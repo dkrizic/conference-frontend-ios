@@ -44,6 +44,10 @@
 		033184FF168281A600581D94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033184FE168281A600581D94 /* Default-568h@2x.png */; };
 		03318502168281A600581D94 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03318500168281A600581D94 /* MainStoryboard.storyboard */; };
 		03318505168281A600581D94 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03318504168281A600581D94 /* MainViewController.m */; };
+		039DFD2D1683D8B100E1793F /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD2C1683D8B100E1793F /* RoomViewController.m */; };
+		039DFD66168465F400E1793F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD65168465F400E1793F /* SettingsViewController.m */; };
+		039DFD6A1684B26600E1793F /* SpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD691684B26600E1793F /* SpeakerViewController.m */; };
+		039DFD6F1684F34700E1793F /* TalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD6E1684F34700E1793F /* TalkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,14 @@
 		03318501168281A600581D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		03318503168281A600581D94 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		03318504168281A600581D94 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		039DFD2B1683D8B100E1793F /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
+		039DFD2C1683D8B100E1793F /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
+		039DFD64168465F400E1793F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		039DFD65168465F400E1793F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		039DFD681684B26600E1793F /* SpeakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerViewController.h; sourceTree = "<group>"; };
+		039DFD691684B26600E1793F /* SpeakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerViewController.m; sourceTree = "<group>"; };
+		039DFD6D1684F34700E1793F /* TalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkViewController.h; sourceTree = "<group>"; };
+		039DFD6E1684F34700E1793F /* TalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +232,6 @@
 		033184D9168281A600581D94 = {
 			isa = PBXGroup;
 			children = (
-				01813E941683B47C0038661F /* Security.framework */,
 				033184EE168281A600581D94 /* RESTClient */,
 				01813EA31683B6510038661F /* RESTClientTests */,
 				033184E7168281A600581D94 /* Frameworks */,
@@ -240,6 +251,7 @@
 		033184E7168281A600581D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01813E941683B47C0038661F /* Security.framework */,
 				03009A6916833BE5007067C2 /* CoreData.framework */,
 				033184E8168281A600581D94 /* UIKit.framework */,
 				033184EA168281A600581D94 /* Foundation.framework */,
@@ -252,6 +264,10 @@
 		033184EE168281A600581D94 /* RESTClient */ = {
 			isa = PBXGroup;
 			children = (
+				039DFD6B1684B2B900E1793F /* Talk */,
+				039DFD671684B24E00E1793F /* Speaker */,
+				039DFD63168465D600E1793F /* Settings */,
+				039DFD2A1683D88E00E1793F /* Room */,
 				03009A6F16834FED007067C2 /* Entity */,
 				03009A6B16833BED007067C2 /* RESTClient.entitlements */,
 				033184F7168281A600581D94 /* AppDelegate.h */,
@@ -277,6 +293,42 @@
 				033184FE168281A600581D94 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		039DFD2A1683D88E00E1793F /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				039DFD2B1683D8B100E1793F /* RoomViewController.h */,
+				039DFD2C1683D8B100E1793F /* RoomViewController.m */,
+			);
+			name = Room;
+			sourceTree = "<group>";
+		};
+		039DFD63168465D600E1793F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				039DFD64168465F400E1793F /* SettingsViewController.h */,
+				039DFD65168465F400E1793F /* SettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		039DFD671684B24E00E1793F /* Speaker */ = {
+			isa = PBXGroup;
+			children = (
+				039DFD681684B26600E1793F /* SpeakerViewController.h */,
+				039DFD691684B26600E1793F /* SpeakerViewController.m */,
+			);
+			name = Speaker;
+			sourceTree = "<group>";
+		};
+		039DFD6B1684B2B900E1793F /* Talk */ = {
+			isa = PBXGroup;
+			children = (
+				039DFD6D1684F34700E1793F /* TalkViewController.h */,
+				039DFD6E1684F34700E1793F /* TalkViewController.m */,
+			);
+			name = Talk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +471,10 @@
 				01813E921683B4000038661F /* NSString-PWExtensions.m in Sources */,
 				01813E931683B4020038661F /* PWISODateFormatter.m in Sources */,
 				01813E981683B4F30038661F /* PWErrors.m in Sources */,
+				039DFD2D1683D8B100E1793F /* RoomViewController.m in Sources */,
+				039DFD66168465F400E1793F /* SettingsViewController.m in Sources */,
+				039DFD6A1684B26600E1793F /* SpeakerViewController.m in Sources */,
+				039DFD6F1684F34700E1793F /* TalkViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
