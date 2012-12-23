@@ -10,4 +10,6 @@
 
 @interface SpeakerViewController : UIViewController  <UITableViewDataSource>
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end

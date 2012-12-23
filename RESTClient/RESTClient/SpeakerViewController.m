@@ -8,11 +8,17 @@
 
 #import "SpeakerViewController.h"
 
+#import <CoreData/CoreData.h>
+
 @interface SpeakerViewController ()
 
 @end
 
 @implementation SpeakerViewController
+
+@synthesize managedObjectContext;
+
+NSMutableArray *speakers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +32,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Speaker"];
+    speakers = [[managedObjectContext executeFetchRequest:fetchRequest error:&error] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,12 +47,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return speakers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSManagedObject *speaker = [speakers objectAtIndex:indexPath.row];
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SpeakersEntry" forIndexPath:indexPath];;
-    cell.textLabel.text = @"Darko Krizic";
+    cell.textLabel.text = [speaker valueForKey:@"name"];
     cell.detailTextLabel.text = @"1";
     return cell;
 }

@@ -14,6 +14,10 @@
         <relationship name="room" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="talks" inverseEntity="Room" syncable="YES"/>
         <relationship name="speakers" optional="YES" toMany="YES" minCount="1" maxCount="3" deletionRule="Nullify" destinationEntity="Speaker" inverseName="talks" inverseEntity="Speaker" syncable="YES"/>
     </entity>
+    <fetchRequest name="allRooms" entity="Room"/>
+    <fetchRequest name="allSpeakers" entity="Speaker"/>
+    <fetchRequest name="allTalks" entity="Talk"/>
+    <fetchRequest name="talkByName" entity="Talk" predicateString="title == &quot;$1&quot;"/>
     <elements>
         <element name="Room" positionX="160" positionY="231" width="128" height="75"/>
         <element name="Speaker" positionX="-216" positionY="258" width="128" height="75"/>
