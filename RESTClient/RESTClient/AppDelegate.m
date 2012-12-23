@@ -24,25 +24,38 @@
 //    MainViewController *controller = (MasterViewController *)navigationController.topViewController;
 //    controller.managedObjectContext = self.managedObjectContext;
 
-    [self managedObjectContext];
     
-    NSError *error = nil;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Speaker"];
-    NSMutableArray *mutableFetchResults = [[_managedObjectContext executeFetchRequest:fetchRequest error:&error] mutableCopy];
-    NSUInteger count = mutableFetchResults.count;
-    if( count == 0 ) {
-        NSLog(@"Creating first entry");
-        Speaker *frank = (Speaker *) [NSEntityDescription insertNewObjectForEntityForName:@"Speaker" inManagedObjectContext:_managedObjectContext];
-        frank.name = @"Frank Illenberger";
-
-        Speaker *darko = (Speaker *) [NSEntityDescription insertNewObjectForEntityForName:@"Speaker" inManagedObjectContext:_managedObjectContext];
-        darko.name = @"Darko Krizic";
-
-        [self saveContext];
-        
-    } else {
-        NSLog(@"First entry found");
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Conference.sqlite"];
+    
+    if ([fileManager fileExistsAtPath:txtPath] == NO) {
+        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Conference" ofType:@"sqlite"];
+        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&error];
     }
+
+    [self managedObjectContext];
+
+//    NSError *error = nil;
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Speaker"];
+//    NSMutableArray *mutableFetchResults = [[_managedObjectContext executeFetchRequest:fetchRequest error:&error] mutableCopy];
+//    NSUInteger count = mutableFetchResults.count;
+//    if( count == 0 ) {
+//        NSLog(@"Creating first entry");
+//        Speaker *frank = (Speaker *) [NSEntityDescription insertNewObjectForEntityForName:@"Speaker" inManagedObjectContext:_managedObjectContext];
+//        frank.name = @"Frank Illenberger";
+//
+//        Speaker *darko = (Speaker *) [NSEntityDescription insertNewObjectForEntityForName:@"Speaker" inManagedObjectContext:_managedObjectContext];
+//        darko.name = @"Darko Krizic";
+//
+//        [self saveContext];
+//        
+//    } else {
+//        NSLog(@"First entry found");
+//    }
     
     return YES;
 }
