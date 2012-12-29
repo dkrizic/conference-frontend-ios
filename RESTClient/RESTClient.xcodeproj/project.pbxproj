@@ -20,14 +20,6 @@
 		01813E931683B4020038661F /* PWISODateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01813E8F1683B38C0038661F /* PWISODateFormatter.m */; };
 		01813E951683B47C0038661F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01813E941683B47C0038661F /* Security.framework */; };
 		01813E981683B4F30038661F /* PWErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 01813E971683B4F20038661F /* PWErrors.m */; };
-		01813EA01683B6510038661F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01813E9F1683B6510038661F /* SenTestingKit.framework */; };
-		01813EA11683B6510038661F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184E8168281A600581D94 /* UIKit.framework */; };
-		01813EA21683B6510038661F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EA168281A600581D94 /* Foundation.framework */; };
-		01813EA81683B6510038661F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01813EA61683B6510038661F /* InfoPlist.strings */; };
-		01813EB81683B6760038661F /* array.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 01813EB11683B6760038661F /* array.yaml */; };
-		01813EB91683B6760038661F /* dictionary 2.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 01813EB21683B6760038661F /* dictionary 2.yaml */; };
-		01813EBA1683B6760038661F /* dictionary.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 01813EB31683B6760038661F /* dictionary.yaml */; };
-		01813EBB1683B6760038661F /* PWYAMLParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01813EB51683B6760038661F /* PWYAMLParserTest.m */; };
 		03009A6A16833BE5007067C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03009A6916833BE5007067C2 /* CoreData.framework */; };
 		03009A6E16834E8F007067C2 /* ConferenceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03009A6C16834E8F007067C2 /* ConferenceModel.xcdatamodeld */; };
 		03009A7216835003007067C2 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 03009A7116835003007067C2 /* Room.m */; };
@@ -44,6 +36,11 @@
 		033184FF168281A600581D94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033184FE168281A600581D94 /* Default-568h@2x.png */; };
 		03318502168281A600581D94 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03318500168281A600581D94 /* MainStoryboard.storyboard */; };
 		03318505168281A600581D94 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03318504168281A600581D94 /* MainViewController.m */; };
+		03453E75168E6103003372B2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01813E9F1683B6510038661F /* SenTestingKit.framework */; };
+		03453E76168E6103003372B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184E8168281A600581D94 /* UIKit.framework */; };
+		03453E77168E6103003372B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EA168281A600581D94 /* Foundation.framework */; };
+		03453E7D168E6103003372B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03453E7B168E6103003372B2 /* InfoPlist.strings */; };
+		03453E80168E6103003372B2 /* RESTClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03453E7F168E6103003372B2 /* RESTClientTests.m */; };
 		036BDFC6168502D600FE2CC4 /* TalkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036BDFC5168502D600FE2CC4 /* TalkDetailViewController.m */; };
 		039DFD2D1683D8B100E1793F /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD2C1683D8B100E1793F /* RoomViewController.m */; };
 		039DFD66168465F400E1793F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD65168465F400E1793F /* SettingsViewController.m */; };
@@ -51,16 +48,6 @@
 		039DFD6F1684F34700E1793F /* TalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD6E1684F34700E1793F /* TalkViewController.m */; };
 		03A4956C168674C9003852B0 /* Conference.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 03A4956B168674C9003852B0 /* Conference.sqlite */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		01813EBD1683B78D0038661F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 033184DB168281A600581D94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 033184E3168281A600581D94;
-			remoteInfo = RESTClient;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01813E731683B2C20038661F /* api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = api.c; sourceTree = "<group>"; };
@@ -82,11 +69,7 @@
 		01813E941683B47C0038661F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		01813E961683B4F20038661F /* PWErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWErrors.h; sourceTree = "<group>"; };
 		01813E971683B4F20038661F /* PWErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWErrors.m; sourceTree = "<group>"; };
-		01813E9E1683B6510038661F /* RESTClientTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RESTClientTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01813E9F1683B6510038661F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		01813EA51683B6510038661F /* RESTClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RESTClientTests-Info.plist"; sourceTree = "<group>"; };
-		01813EA71683B6510038661F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		01813EAC1683B6510038661F /* RESTClientTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RESTClientTests-Prefix.pch"; sourceTree = "<group>"; };
 		01813EB11683B6760038661F /* array.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = array.yaml; sourceTree = "<group>"; };
 		01813EB21683B6760038661F /* dictionary 2.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dictionary 2.yaml"; sourceTree = "<group>"; };
 		01813EB31683B6760038661F /* dictionary.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.yaml; sourceTree = "<group>"; };
@@ -117,6 +100,12 @@
 		03318501168281A600581D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		03318503168281A600581D94 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		03318504168281A600581D94 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		03453E74168E6103003372B2 /* RESTClientTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RESTClientTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03453E7A168E6103003372B2 /* RESTClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RESTClientTests-Info.plist"; sourceTree = "<group>"; };
+		03453E7C168E6103003372B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03453E7E168E6103003372B2 /* RESTClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClientTests.h; sourceTree = "<group>"; };
+		03453E7F168E6103003372B2 /* RESTClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClientTests.m; sourceTree = "<group>"; };
+		03453E81168E6103003372B2 /* RESTClientTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RESTClientTests-Prefix.pch"; sourceTree = "<group>"; };
 		036BDFC4168502D600FE2CC4 /* TalkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkDetailViewController.h; sourceTree = "<group>"; };
 		036BDFC5168502D600FE2CC4 /* TalkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkDetailViewController.m; sourceTree = "<group>"; };
 		039DFD2B1683D8B100E1793F /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
@@ -131,16 +120,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		01813E9A1683B6510038661F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01813EA01683B6510038661F /* SenTestingKit.framework in Frameworks */,
-				01813EA11683B6510038661F /* UIKit.framework in Frameworks */,
-				01813EA21683B6510038661F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		033184E1168281A600581D94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +129,16 @@
 				033184E9168281A600581D94 /* UIKit.framework in Frameworks */,
 				033184EB168281A600581D94 /* Foundation.framework in Frameworks */,
 				033184ED168281A600581D94 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03453E70168E6103003372B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03453E75168E6103003372B2 /* SenTestingKit.framework in Frameworks */,
+				03453E76168E6103003372B2 /* UIKit.framework in Frameworks */,
+				03453E77168E6103003372B2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,24 +179,6 @@
 			path = libYAML;
 			sourceTree = "<group>";
 		};
-		01813EA31683B6510038661F /* RESTClientTests */ = {
-			isa = PBXGroup;
-			children = (
-				01813EA41683B6510038661F /* Supporting Files */,
-			);
-			path = RESTClientTests;
-			sourceTree = "<group>";
-		};
-		01813EA41683B6510038661F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				01813EA51683B6510038661F /* RESTClientTests-Info.plist */,
-				01813EA61683B6510038661F /* InfoPlist.strings */,
-				01813EAC1683B6510038661F /* RESTClientTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		01813EB01683B6740038661F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				033184EE168281A600581D94 /* RESTClient */,
-				01813EA31683B6510038661F /* RESTClientTests */,
+				03453E78168E6103003372B2 /* RESTClientTests */,
 				033184E7168281A600581D94 /* Frameworks */,
 				033184E5168281A600581D94 /* Products */,
 			);
@@ -249,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				033184E4168281A600581D94 /* RESTClient.app */,
-				01813E9E1683B6510038661F /* RESTClientTests.octest */,
+				03453E74168E6103003372B2 /* RESTClientTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,6 +268,26 @@
 				033184FA168281A600581D94 /* Default.png */,
 				033184FC168281A600581D94 /* Default@2x.png */,
 				033184FE168281A600581D94 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03453E78168E6103003372B2 /* RESTClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				03453E7E168E6103003372B2 /* RESTClientTests.h */,
+				03453E7F168E6103003372B2 /* RESTClientTests.m */,
+				03453E79168E6103003372B2 /* Supporting Files */,
+			);
+			path = RESTClientTests;
+			sourceTree = "<group>";
+		};
+		03453E79168E6103003372B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03453E7A168E6103003372B2 /* RESTClientTests-Info.plist */,
+				03453E7B168E6103003372B2 /* InfoPlist.strings */,
+				03453E81168E6103003372B2 /* RESTClientTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -350,25 +341,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01813E9D1683B6510038661F /* RESTClientTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01813EAD1683B6510038661F /* Build configuration list for PBXNativeTarget "RESTClientTests" */;
-			buildPhases = (
-				01813E991683B6510038661F /* Sources */,
-				01813E9A1683B6510038661F /* Frameworks */,
-				01813E9B1683B6510038661F /* Resources */,
-				01813E9C1683B6510038661F /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				01813EBE1683B78D0038661F /* PBXTargetDependency */,
-			);
-			name = RESTClientTests;
-			productName = RESTClientTests;
-			productReference = 01813E9E1683B6510038661F /* RESTClientTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		033184E3168281A600581D94 /* RESTClient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03318508168281A600581D94 /* Build configuration list for PBXNativeTarget "RESTClient" */;
@@ -385,6 +357,24 @@
 			productName = RESTClient;
 			productReference = 033184E4168281A600581D94 /* RESTClient.app */;
 			productType = "com.apple.product-type.application";
+		};
+		03453E73168E6103003372B2 /* RESTClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03453E82168E6103003372B2 /* Build configuration list for PBXNativeTarget "RESTClientTests" */;
+			buildPhases = (
+				03453E6F168E6103003372B2 /* Sources */,
+				03453E70168E6103003372B2 /* Frameworks */,
+				03453E71168E6103003372B2 /* Resources */,
+				03453E72168E6103003372B2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RESTClientTests;
+			productName = RESTClientTests;
+			productReference = 03453E74168E6103003372B2 /* RESTClientTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -408,23 +398,12 @@
 			projectRoot = "";
 			targets = (
 				033184E3168281A600581D94 /* RESTClient */,
-				01813E9D1683B6510038661F /* RESTClientTests */,
+				03453E73168E6103003372B2 /* RESTClientTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		01813E9B1683B6510038661F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01813EA81683B6510038661F /* InfoPlist.strings in Resources */,
-				01813EB81683B6760038661F /* array.yaml in Resources */,
-				01813EB91683B6760038661F /* dictionary 2.yaml in Resources */,
-				01813EBA1683B6760038661F /* dictionary.yaml in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		033184E2168281A600581D94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,10 +417,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03453E71168E6103003372B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03453E7D168E6103003372B2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01813E9C1683B6510038661F /* ShellScript */ = {
+		03453E72168E6103003372B2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -457,14 +444,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		01813E991683B6510038661F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01813EBB1683B6760038661F /* PWYAMLParserTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		033184E0168281A600581D94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,25 +475,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03453E6F168E6103003372B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03453E80168E6103003372B2 /* RESTClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		01813EBE1683B78D0038661F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 033184E3168281A600581D94 /* RESTClient */;
-			targetProxy = 01813EBD1683B78D0038661F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		01813EA61683B6510038661F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01813EA71683B6510038661F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		033184F1168281A600581D94 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -531,51 +502,17 @@
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
+		03453E7B168E6103003372B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03453E7C168E6103003372B2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		01813EAE1683B6510038661F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RESTClient.app/RESTClient";
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RESTClientTests/RESTClientTests-Prefix.pch";
-				INFOPLIST_FILE = "RESTClientTests/RESTClientTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		01813EAF1683B6510038661F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RESTClient.app/RESTClient";
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RESTClientTests/RESTClientTests-Prefix.pch";
-				INFOPLIST_FILE = "RESTClientTests/RESTClientTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 		03318506168281A600581D94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -620,6 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -652,18 +590,43 @@
 			};
 			name = Release;
 		};
+		03453E83168E6103003372B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RESTClient.app/RESTClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RESTClientTests/RESTClientTests-Prefix.pch";
+				INFOPLIST_FILE = "RESTClientTests/RESTClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "${BUNDLE_LOADER}";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		03453E84168E6103003372B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RESTClient.app/RESTClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RESTClientTests/RESTClientTests-Prefix.pch";
+				INFOPLIST_FILE = "RESTClientTests/RESTClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "${BUNDLE_LOADER}";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01813EAD1683B6510038661F /* Build configuration list for PBXNativeTarget "RESTClientTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01813EAE1683B6510038661F /* Debug */,
-				01813EAF1683B6510038661F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		033184DE168281A600581D94 /* Build configuration list for PBXProject "RESTClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -681,6 +644,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		03453E82168E6103003372B2 /* Build configuration list for PBXNativeTarget "RESTClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03453E83168E6103003372B2 /* Debug */,
+				03453E84168E6103003372B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
