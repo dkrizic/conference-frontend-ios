@@ -47,6 +47,7 @@
 		039DFD6A1684B26600E1793F /* SpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD691684B26600E1793F /* SpeakerViewController.m */; };
 		039DFD6F1684F34700E1793F /* TalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD6E1684F34700E1793F /* TalkViewController.m */; };
 		03A4956C168674C9003852B0 /* Conference.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 03A4956B168674C9003852B0 /* Conference.sqlite */; };
+		03D435B3168F960A00521F66 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D435B2168F960A00521F66 /* UpdateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,8 @@
 		039DFD6D1684F34700E1793F /* TalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkViewController.h; sourceTree = "<group>"; };
 		039DFD6E1684F34700E1793F /* TalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkViewController.m; sourceTree = "<group>"; };
 		03A4956B168674C9003852B0 /* Conference.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Conference.sqlite; sourceTree = "<group>"; };
+		03D435B1168F960A00521F66 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		03D435B2168F960A00521F66 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +244,7 @@
 		033184EE168281A600581D94 /* RESTClient */ = {
 			isa = PBXGroup;
 			children = (
+				03D435AD168F95C900521F66 /* Update */,
 				039DFD6B1684B2B900E1793F /* Talk */,
 				039DFD671684B24E00E1793F /* Speaker */,
 				039DFD63168465D600E1793F /* Settings */,
@@ -336,6 +340,15 @@
 				039DFD6E1684F34700E1793F /* TalkViewController.m */,
 			);
 			name = Talk;
+			sourceTree = "<group>";
+		};
+		03D435AD168F95C900521F66 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				03D435B1168F960A00521F66 /* UpdateViewController.h */,
+				03D435B2168F960A00521F66 /* UpdateViewController.m */,
+			);
+			name = Update;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +485,7 @@
 				039DFD6A1684B26600E1793F /* SpeakerViewController.m in Sources */,
 				039DFD6F1684F34700E1793F /* TalkViewController.m in Sources */,
 				036BDFC6168502D600FE2CC4 /* TalkDetailViewController.m in Sources */,
+				03D435B3168F960A00521F66 /* UpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +666,7 @@
 				03453E84168E6103003372B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
