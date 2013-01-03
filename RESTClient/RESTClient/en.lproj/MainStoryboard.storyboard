@@ -31,7 +31,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="-1" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-Da-qj5">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RoomsEntry" textLabel="Vqv-2C-yK2" detailTextLabel="6P1-Ns-Xur" style="IBUITableViewCellStyleValue1" id="rn6-ZJ-Eot">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RoomsEntry" textLabel="Vqv-2C-yK2" detailTextLabel="6P1-Ns-Xur" style="IBUITableViewCellStyleValue1" id="rn6-ZJ-Eot">
                                         <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -121,7 +121,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="2iB-y1-n9v">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SpeakersEntry" textLabel="TjU-dk-FAM" detailTextLabel="lhN-KQ-4rQ" style="IBUITableViewCellStyleValue1" id="Fyp-WW-mDy">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SpeakersEntry" textLabel="TjU-dk-FAM" detailTextLabel="lhN-KQ-4rQ" style="IBUITableViewCellStyleValue1" id="Fyp-WW-mDy">
                                         <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -379,7 +379,7 @@
                                     <constraint firstAttribute="height" constant="367" id="byA-GB-wDS"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TalkEntry" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TalksEntry" textLabel="epj-le-Y0Z" detailTextLabel="HLO-DU-Z6O" style="IBUITableViewCellStyleSubtitle" id="2Ff-dS-yhs">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TalkEntry" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TalksEntry" textLabel="epj-le-Y0Z" detailTextLabel="HLO-DU-Z6O" style="IBUITableViewCellStyleSubtitle" id="2Ff-dS-yhs">
                                         <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
