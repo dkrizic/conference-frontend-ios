@@ -2,8 +2,8 @@
 //  Speaker.h
 //  RESTClient
 //
-//  Created by Darko Krizic on 2012-12-20.
-//  Copyright (c) 2012 Darko Krizic. All rights reserved.
+//  Created by Darko Krizic on 2013-01-03.
+//  Copyright (c) 2013 Darko Krizic. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,6 +14,15 @@
 @interface Speaker : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) Talk *talks;
+@property (nonatomic, retain) NSString * id;
+@property (nonatomic, retain) NSSet *talks;
+@end
+
+@interface Speaker (CoreDataGeneratedAccessors)
+
+- (void)addTalksObject:(Talk *)value;
+- (void)removeTalksObject:(Talk *)value;
+- (void)addTalks:(NSSet *)values;
+- (void)removeTalks:(NSSet *)values;
 
 @end

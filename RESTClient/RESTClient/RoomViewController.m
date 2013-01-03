@@ -14,6 +14,8 @@
 
 @implementation RoomViewController
 
+@synthesize managedObjectContext, rooms;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [super viewDidLoad];
+    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Room" inManagedObjectContext:managedObjectContext];
+    [request setEntity:entity];
+    NSError *error = nil;
+    rooms = [managedObjectContext executeFetchRequest:request error:&error];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,8 +55,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Room *room = (Room *) [rooms objectAtIndex:[indexPath row]];
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RoomsEntry" forIndexPath:indexPath];;
-    cell.textLabel.text = @"Ballsaal";
+    cell.textLabel.text = room.name;
     cell.detailTextLabel.text = @"1";
     return cell;
 }

@@ -14,6 +14,8 @@
 
 @implementation UpdateViewController
 
+@synthesize managedObjectContext;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,18 +28,42 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"Did laod");
-    NSStringEncoding *encoding = NULL;
-    NSError *error;
-    NSURL *jsonURL = [NSURL URLWithString:@"http://conference-krizic.rhcloud.com/rest/talk/all"];
+    NSURL *url = [NSURL URLWithString:@"http://conference-krizic.rhcloud.com/rest/talk/all"];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSLog(@"Starting access");
-    NSString *jsonData = [[NSString alloc] initWithContentsOfURL:jsonURL usedEncoding:encoding error:&error];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    // NSString *json = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
     NSLog(@"Access finished");
-    NSLog(jsonData);
+    NSArray *talks = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"Found %i talks", [talks count] );
+    for( NSDictionary *talk in talks ) {
+        NSLog(@"Talk %@", talk );
+        NSString *talkid = [talk objectForKey:@"id"];
+        NSString *name = [talk objectForKey:@"name"];
+        NSLog(@"%@ %@", talkid, name);
+        
+        NSDictionary *room = [talk objectForKey:@"room"];
+        NSString *room_id = [room objectForKey:@"id"];
+        NSString *room_name = [room objectForKey:@"name"];
+        NSNumber *room_capacity = [room objectForKey:@"capacity"];
+        NSLog(@"%@ %@ %@", room_id, room_name, room_capacity);
+    
+        Room *roomEntity = (Room *) [NSEntityDescription insertNewObjectForEntityForName:@"Room" inManagedObjectContext:managedObjectContext];
+
+        roomEntity.id = room_id;
+        roomEntity.name = room_name;
+        roomEntity.capacity = room_capacity;
+
+        NSLog(@"Room object %@", roomEntity );
+          [managedObjectContext save:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning

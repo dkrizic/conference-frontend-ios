@@ -2,8 +2,8 @@
 //  Talk.h
 //  RESTClient
 //
-//  Created by Darko Krizic on 2012-12-20.
-//  Copyright (c) 2012 Darko Krizic. All rights reserved.
+//  Created by Darko Krizic on 2013-01-03.
+//  Copyright (c) 2013 Darko Krizic. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,8 +13,10 @@
 
 @interface Talk : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSDate * start;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * id;
+@property (nonatomic, retain) NSNumber * minutes;
 @property (nonatomic, retain) Room *room;
 @property (nonatomic, retain) NSSet *speakers;
 @end

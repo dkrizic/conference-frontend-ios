@@ -27,12 +27,6 @@
 {
     [super viewDidLoad];
     NSLog(@"Settings Controller");
-//
-//    NSStringEncoding *encoding;
-//    NSError *error;
-//    NSURL *jsonURL = [NSURL URLWithString:@"http://conference-krizic.rhcloud.com/rest/talk/all"];
-//    NSString *jsonData = [[NSString alloc] initWithContentsOfURL:jsonURL encoding:&encoding error:&error];
-//    NSLog(jsonData);
 }
 
 - (void)didReceiveMemoryWarning

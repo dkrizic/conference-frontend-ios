@@ -24,19 +24,6 @@
 //    MainViewController *controller = (MasterViewController *)navigationController.topViewController;
 //    controller.managedObjectContext = self.managedObjectContext;
 
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error;
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Conference.sqlite"];
-    
-    if ([fileManager fileExistsAtPath:txtPath] == NO) {
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Conference" ofType:@"sqlite"];
-        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&error];
-    }
-
     [self managedObjectContext];
 
 //    NSError *error = nil;

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+#import "Room.h"
 
 @interface RoomViewController : UIViewController <UITableViewDataSource>
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSArray *rooms;
 
 @end

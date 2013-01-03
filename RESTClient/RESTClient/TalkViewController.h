@@ -10,5 +10,6 @@
 
 @interface TalkViewController : UIViewController <UITableViewDataSource>
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

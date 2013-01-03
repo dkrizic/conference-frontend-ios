@@ -6,8 +6,12 @@
 //  Copyright (c) 2012 Darko Krizic. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
+#import "Room.h"
 
 @interface UpdateViewController : UIViewController
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

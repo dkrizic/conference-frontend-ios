@@ -14,6 +14,8 @@
 
 @implementation TalkViewController
 
+@synthesize managedObjectContext;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
 }
 
 - (void)didReceiveMemoryWarning
