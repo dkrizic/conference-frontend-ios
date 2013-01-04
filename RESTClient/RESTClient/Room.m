@@ -2,7 +2,7 @@
 //  Room.m
 //  RESTClient
 //
-//  Created by Darko Krizic on 2013-01-03.
+//  Created by Darko Krizic on 2013-01-04.
 //  Copyright (c) 2013 Darko Krizic. All rights reserved.
 //
 
@@ -12,9 +12,10 @@
 
 @implementation Room
 
-@dynamic name;
-@dynamic id;
 @dynamic capacity;
+@dynamic id;
+@dynamic name;
+@dynamic updated;
 @dynamic talks;
 
 @end

@@ -14,7 +14,7 @@
 
 @implementation TalkViewController
 
-@synthesize managedObjectContext;
+@synthesize managedObjectContext, talks;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,11 @@
     [super viewDidLoad];
     id appDelegate = (id)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
+
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Talk" inManagedObjectContext:managedObjectContext];
+    [request setEntity:entity];
+    talks = [managedObjectContext executeFetchRequest:request error:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,15 +44,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [talks count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TalksEntry" forIndexPath:indexPath];
-    cell.textLabel.text = @"Das Leben des Perff";
-    cell.detailTextLabel.text = @"Darko Krizic, Ballsaal";
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    Talk *talk = (Talk *) [talks objectAtIndex:[indexPath row]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TalksEntry" forIndexPath:indexPath];;
+    cell.textLabel.text = talk.name;
+    cell.detailTextLabel.text = talk.room.name;
     return cell;
+
 }
 
 @end

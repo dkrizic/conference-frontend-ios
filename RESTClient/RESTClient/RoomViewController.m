@@ -28,16 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [super viewDidLoad];
     id appDelegate = (id)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Room" inManagedObjectContext:managedObjectContext];
     [request setEntity:entity];
-    NSError *error = nil;
-    rooms = [managedObjectContext executeFetchRequest:request error:&error];
-    
+    rooms = [managedObjectContext executeFetchRequest:request error:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +48,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-        return 1;
+    return rooms.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

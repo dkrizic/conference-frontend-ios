@@ -38,10 +38,10 @@
 		03453E77168E6103003372B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033184EA168281A600581D94 /* Foundation.framework */; };
 		03453E7D168E6103003372B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03453E7B168E6103003372B2 /* InfoPlist.strings */; };
 		03453E80168E6103003372B2 /* RESTClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03453E7F168E6103003372B2 /* RESTClientTests.m */; };
+		034FC693169792CE00BE8747 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 034FC692169792CE00BE8747 /* Speaker.m */; };
+		034FC696169792CE00BE8747 /* Talk.m in Sources */ = {isa = PBXBuildFile; fileRef = 034FC695169792CE00BE8747 /* Talk.m */; };
+		034FC699169792CE00BE8747 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 034FC698169792CE00BE8747 /* Room.m */; };
 		036BDFC6168502D600FE2CC4 /* TalkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036BDFC5168502D600FE2CC4 /* TalkDetailViewController.m */; };
-		038AC86D16962D8300942135 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 038AC86C16962D8300942135 /* Speaker.m */; };
-		038AC87016962D8300942135 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 038AC86F16962D8300942135 /* Room.m */; };
-		038AC87316962D8300942135 /* Talk.m in Sources */ = {isa = PBXBuildFile; fileRef = 038AC87216962D8300942135 /* Talk.m */; };
 		039DFD2D1683D8B100E1793F /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD2C1683D8B100E1793F /* RoomViewController.m */; };
 		039DFD66168465F400E1793F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD65168465F400E1793F /* SettingsViewController.m */; };
 		039DFD6A1684B26600E1793F /* SpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DFD691684B26600E1793F /* SpeakerViewController.m */; };
@@ -100,14 +100,14 @@
 		03453E7E168E6103003372B2 /* RESTClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClientTests.h; sourceTree = "<group>"; };
 		03453E7F168E6103003372B2 /* RESTClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClientTests.m; sourceTree = "<group>"; };
 		03453E81168E6103003372B2 /* RESTClientTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RESTClientTests-Prefix.pch"; sourceTree = "<group>"; };
+		034FC691169792CE00BE8747 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
+		034FC692169792CE00BE8747 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		034FC694169792CE00BE8747 /* Talk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Talk.h; sourceTree = "<group>"; };
+		034FC695169792CE00BE8747 /* Talk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talk.m; sourceTree = "<group>"; };
+		034FC697169792CE00BE8747 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		034FC698169792CE00BE8747 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 		036BDFC4168502D600FE2CC4 /* TalkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkDetailViewController.h; sourceTree = "<group>"; };
 		036BDFC5168502D600FE2CC4 /* TalkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkDetailViewController.m; sourceTree = "<group>"; };
-		038AC86B16962D8300942135 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
-		038AC86C16962D8300942135 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
-		038AC86E16962D8300942135 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
-		038AC86F16962D8300942135 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
-		038AC87116962D8300942135 /* Talk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Talk.h; sourceTree = "<group>"; };
-		038AC87216962D8300942135 /* Talk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talk.m; sourceTree = "<group>"; };
 		039DFD2B1683D8B100E1793F /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		039DFD2C1683D8B100E1793F /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
 		039DFD64168465F400E1793F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -195,13 +195,13 @@
 		03009A6F16834FED007067C2 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				034FC697169792CE00BE8747 /* Room.h */,
+				034FC698169792CE00BE8747 /* Room.m */,
+				034FC694169792CE00BE8747 /* Talk.h */,
+				034FC695169792CE00BE8747 /* Talk.m */,
+				034FC691169792CE00BE8747 /* Speaker.h */,
+				034FC692169792CE00BE8747 /* Speaker.m */,
 				03009A6C16834E8F007067C2 /* ConferenceModel.xcdatamodeld */,
-				038AC87116962D8300942135 /* Talk.h */,
-				038AC87216962D8300942135 /* Talk.m */,
-				038AC86E16962D8300942135 /* Room.h */,
-				038AC86F16962D8300942135 /* Room.m */,
-				038AC86B16962D8300942135 /* Speaker.h */,
-				038AC86C16962D8300942135 /* Speaker.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -479,9 +479,9 @@
 				039DFD6F1684F34700E1793F /* TalkViewController.m in Sources */,
 				036BDFC6168502D600FE2CC4 /* TalkDetailViewController.m in Sources */,
 				03D435B3168F960A00521F66 /* UpdateViewController.m in Sources */,
-				038AC86D16962D8300942135 /* Speaker.m in Sources */,
-				038AC87016962D8300942135 /* Room.m in Sources */,
-				038AC87316962D8300942135 /* Talk.m in Sources */,
+				034FC693169792CE00BE8747 /* Speaker.m in Sources */,
+				034FC696169792CE00BE8747 /* Talk.m in Sources */,
+				034FC699169792CE00BE8747 /* Room.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
