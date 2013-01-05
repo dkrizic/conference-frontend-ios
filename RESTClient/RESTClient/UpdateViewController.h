@@ -10,13 +10,10 @@
 #import <UIKit/UIKit.h>
 #import "Room.h"
 #import "Talk.h"
+#import "Speaker.h"
 
 @interface UpdateViewController : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-//- (void) handleTalks:(NSArray *) talks;
-//- (void) handleTalk:(NSDictionary *) talk;
-//- (Room *) createRoom;
 
 @end
