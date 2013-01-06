@@ -34,13 +34,20 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self updateContent];
+}
+
+- (void) updateContent
+{
+    [self markAllUntouched];
+    
     // Load JSON Strin gfrom URL
     NSURL *url = [NSURL URLWithString:@"http://conference-krizic.rhcloud.com/rest/talk/all"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSLog(@"Starting access");
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSLog(@"Access finished");
-
+    
     // Deserialize JSON
     NSArray *talks = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
     [self handleTalks:talks];
@@ -77,6 +84,7 @@
     talkEntity.room = roomEntity;
     talkEntity.name = name;
     talkEntity.updated = [NSNumber numberWithBool:YES];
+    talkEntity.touched = [NSNumber numberWithBool:YES];
     talkEntity.speakers = speakerEntities;
 }
 
@@ -101,6 +109,7 @@
     }
     speakerEntity.id = speakerId;
     speakerEntity.name = name;
+    speakerEntity.touched = [NSNumber numberWithBool:YES];
     return speakerEntity;
 }
 
@@ -143,6 +152,7 @@
     roomEntity.name = name;
     roomEntity.capacity = capacity;
     roomEntity.updated = [NSNumber numberWithBool:YES];
+    roomEntity.touched = [NSNumber numberWithBool:YES];
     NSLog(@"Room object %@", roomEntity );
     return roomEntity;
 }
@@ -171,10 +181,10 @@
 
 - (Talk *)talkById:(NSString *)roomId
 {
-    NSEntityDescription *roomType = [NSEntityDescription entityForName:@"Talk" inManagedObjectContext:managedObjectContext];
+    NSEntityDescription *talkType = [NSEntityDescription entityForName:@"Talk" inManagedObjectContext:managedObjectContext];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id=%@", roomId];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:roomType];
+    [request setEntity:talkType];
     [request setPredicate:predicate];
     NSArray *talks = [managedObjectContext executeFetchRequest:request error:nil];
     if( talks.count == 0 ) {
@@ -195,6 +205,52 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)markAllUntouched
+{
+    [self markTalksUntouched];
+    [self markRoomsUntouched];
+    [self markSpeakersUntouched];
+}
+
+- (void)markTalksUntouched
+{
+    NSEntityDescription *talkType = [NSEntityDescription entityForName:@"Talk" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:talkType];
+    NSArray *talks = [managedObjectContext executeFetchRequest:request error:nil];
+    if( talks != nil ) {
+        for( Talk *talk in talks ) {
+            talk.touched = NO;
+        }
+    }
+}
+
+- (void)markRoomsUntouched
+{
+    NSEntityDescription *roomType = [NSEntityDescription entityForName:@"Room" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:roomType];
+    NSArray *rooms = [managedObjectContext executeFetchRequest:request error:nil];
+    if( rooms != nil ) {
+        for( Room *room in rooms ) {
+            room.touched = NO;
+        }
+    }
+}
+
+- (void)markSpeakersUntouched
+{
+    NSEntityDescription *speakerType = [NSEntityDescription entityForName:@"Speaker" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:speakerType];
+    NSArray *speakers = [managedObjectContext executeFetchRequest:request error:nil];
+    if( speakers != nil ) {
+        for( Speaker *speaker in speakers ) {
+            speaker.touched = NO;
+        }
+    }
 }
 
 @end

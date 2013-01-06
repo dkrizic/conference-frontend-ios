@@ -2,7 +2,7 @@
 //  Talk.m
 //  RESTClient
 //
-//  Created by Darko Krizic on 2013-01-04.
+//  Created by Darko Krizic on 2013-01-06.
 //  Copyright (c) 2013 Darko Krizic. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @dynamic name;
 @dynamic start;
 @dynamic updated;
+@dynamic touched;
 @dynamic room;
 @dynamic speakers;
 

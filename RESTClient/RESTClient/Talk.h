@@ -2,7 +2,7 @@
 //  Talk.h
 //  RESTClient
 //
-//  Created by Darko Krizic on 2013-01-04.
+//  Created by Darko Krizic on 2013-01-06.
 //  Copyright (c) 2013 Darko Krizic. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * start;
 @property (nonatomic, retain) NSNumber * updated;
+@property (nonatomic, retain) NSNumber * touched;
 @property (nonatomic, retain) Room *room;
 @property (nonatomic, retain) NSSet *speakers;
 @end
