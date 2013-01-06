@@ -14,7 +14,7 @@
 
 @implementation TalkViewController
 
-@synthesize managedObjectContext, talks;
+@synthesize managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,10 +31,6 @@
     id appDelegate = (id)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
 
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Talk" inManagedObjectContext:managedObjectContext];
-    [request setEntity:entity];
-    talks = [managedObjectContext executeFetchRequest:request error:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,16 +40,26 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray *talks = [self readAllTalks];
     return [talks count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *talks = [self readAllTalks];
     Talk *talk = (Talk *) [talks objectAtIndex:[indexPath row]];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TalksEntry" forIndexPath:indexPath];;
     cell.textLabel.text = talk.name;
     cell.detailTextLabel.text = talk.room.name;
     return cell;
 
+}
+
+-(NSArray *)readAllTalks {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Talk" inManagedObjectContext:managedObjectContext];
+    [request setEntity:entity];
+    NSArray *talks = [managedObjectContext executeFetchRequest:request error:nil];
+    return talks;
 }
 
 @end

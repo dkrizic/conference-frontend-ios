@@ -14,7 +14,7 @@
 
 @implementation RoomViewController
 
-@synthesize managedObjectContext, rooms;
+@synthesize managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,10 +31,6 @@
     id appDelegate = (id)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Room" inManagedObjectContext:managedObjectContext];
-    [request setEntity:entity];
-    rooms = [managedObjectContext executeFetchRequest:request error:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,16 +44,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray *rooms = [self readAllRooms];
     return rooms.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *rooms = [self readAllRooms];
     Room *room = (Room *) [rooms objectAtIndex:[indexPath row]];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RoomsEntry" forIndexPath:indexPath];;
     cell.textLabel.text = room.name;
     cell.detailTextLabel.text = @"1";
     return cell;
+}
+
+- (NSArray *) readAllRooms
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Room" inManagedObjectContext:managedObjectContext];
+    [request setEntity:entity];
+    NSArray *rooms = [managedObjectContext executeFetchRequest:request error:nil];
+    return rooms;
 }
 
 @end

@@ -51,6 +51,11 @@
     // Deserialize JSON
     NSArray *talks = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
     [self handleTalks:talks];
+    
+    [self deleteAllUntouched];
+    
+    NSLog(@"Saving managed context");
+    [managedObjectContext  save:nil];    
 }
 
 - (void) handleTalks:(NSArray *) talks {
@@ -58,7 +63,6 @@
     for( NSDictionary *talk in talks ) {
         [self handleTalk:talk];
     }
-    [managedObjectContext save:nil];
 }
 
 - (void) handleTalk:(NSDictionary *)talk {
@@ -249,6 +253,61 @@
     if( speakers != nil ) {
         for( Speaker *speaker in speakers ) {
             speaker.touched = NO;
+        }
+    }
+}
+
+- (void) deleteAllUntouched
+{
+    [self deleteUntouchedRooms];
+    [self deleteUntouchedSpeakers];
+    [self deleteUntouchedTalks];
+}
+
+- (void) deleteUntouchedRooms
+{
+    NSEntityDescription *roomType = [NSEntityDescription entityForName:@"Room" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:roomType];
+    NSArray *rooms = [managedObjectContext executeFetchRequest:request error:nil];
+    if( rooms != nil ) {
+        for( Room *room in rooms ) {
+            if( room.touched == [NSNumber numberWithBool:NO] ) {
+                NSLog(@"Deleting room %@", room );
+                [managedObjectContext deleteObject:room];
+            }
+        }
+    }
+}
+
+-(void) deleteUntouchedSpeakers
+{
+    NSEntityDescription *speakerType = [NSEntityDescription entityForName:@"Speaker" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:speakerType];
+    NSArray *speakers = [managedObjectContext executeFetchRequest:request error:nil];
+    if( speakers != nil ) {
+        for( Speaker *speaker in speakers ) {
+            if( speaker.touched == [NSNumber numberWithBool:NO] ) {
+                NSLog(@"Deleting speaker %@", speaker );
+                [managedObjectContext deleteObject:speaker];
+            }
+        }
+    }
+}
+
+-(void) deleteUntouchedTalks
+{
+    NSEntityDescription *talkType = [NSEntityDescription entityForName:@"Talk" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:talkType];
+    NSArray *talks = [managedObjectContext executeFetchRequest:request error:nil];
+    if( talks != nil ) {
+        for( Talk *talk in talks ) {
+            if( talk.touched == [NSNumber numberWithBool:NO] ) {
+                NSLog(@"Deleting talk %@", talk );
+                [managedObjectContext deleteObject:talk];
+            }
         }
     }
 }

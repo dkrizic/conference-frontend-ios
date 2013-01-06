@@ -14,6 +14,5 @@
 @interface RoomViewController : UIViewController <UITableViewDataSource>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) NSArray *rooms;
 
 @end
