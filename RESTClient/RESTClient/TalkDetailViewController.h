@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TalkDetailViewController : UIViewController <UITableViewDataSource>
+#import "Talk.h"
+#import "Room.h"
+#import "Speaker.h"
 
+@interface TalkDetailViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UITableViewCell *talkName;
+@property (weak, nonatomic) IBOutlet UITableViewCell *roomName;
+@property (weak, nonatomic) IBOutlet UITableViewCell *speakerName;
+
+@property (strong, nonatomic) Talk *talk;
 @end

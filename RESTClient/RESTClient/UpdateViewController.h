@@ -12,7 +12,7 @@
 #import "Talk.h"
 #import "Speaker.h"
 
-@interface UpdateViewController : UIViewController
+@interface UpdateViewController : UITableViewController <UITableViewDataSource>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 

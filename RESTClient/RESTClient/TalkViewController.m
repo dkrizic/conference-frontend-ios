@@ -7,12 +7,15 @@
 //
 
 #import "TalkViewController.h"
+#import "TalkDetailViewController.h"
 
 @interface TalkViewController ()
 
 @end
 
 @implementation TalkViewController
+
+NSInteger selectedRow;
 
 @synthesize managedObjectContext;
 
@@ -60,6 +63,19 @@
     [request setEntity:entity];
     NSArray *talks = [managedObjectContext executeFetchRequest:request error:nil];
     return talks;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    selectedRow = indexPath.row;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSArray *talks = [self readAllTalks];
+    Talk *talk = (Talk *) [talks objectAtIndex:selectedRow];
+    TalkDetailViewController *detail = [segue destinationViewController];
+    detail.talk = talk;
 }
 
 @end

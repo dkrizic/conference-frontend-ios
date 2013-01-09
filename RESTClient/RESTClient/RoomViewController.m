@@ -14,7 +14,7 @@
 
 @implementation RoomViewController
 
-@synthesize managedObjectContext;
+@synthesize managedObjectContext, room;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,10 +50,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *rooms = [self readAllRooms];
-    Room *room = (Room *) [rooms objectAtIndex:[indexPath row]];
+    Room *cellRoom = (Room *) [rooms objectAtIndex:[indexPath row]];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RoomsEntry" forIndexPath:indexPath];;
-    cell.textLabel.text = room.name;
+    cell.textLabel.text = cellRoom.name;
     cell.detailTextLabel.text = @"1";
     return cell;
 }

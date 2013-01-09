@@ -13,6 +13,7 @@
 @end
 
 @implementation TalkDetailViewController
+@synthesize talk, talkName, roomName, speakerName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,25 +24,27 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    talkName.textLabel.text = talk.name;
+    roomName.textLabel.text = talk.room.name;
+    // UITableView *tableView = [self tableView];
+    NSSet *speakers = talk.speakers;
+    if( speakers != nil ) {
+    for( Speaker *speaker in speakers ) {
+        speakerName.textLabel.text = speaker.name;
+    }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TalkDetail" forIndexPath:indexPath];    cell.textLabel.text = @"Das Leben des Perff";
-    return cell;
 }
 
 @end
