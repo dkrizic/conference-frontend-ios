@@ -15,8 +15,6 @@
 
 @implementation TalkViewController
 
-NSInteger selectedRow;
-
 @synthesize managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -65,13 +63,9 @@ NSInteger selectedRow;
     return talks;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    selectedRow = indexPath.row;
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSInteger selectedRow = [[self tableView] indexPathForSelectedRow].row;
     NSArray *talks = [self readAllTalks];
     Talk *talk = (Talk *) [talks objectAtIndex:selectedRow];
     TalkDetailViewController *detail = [segue destinationViewController];

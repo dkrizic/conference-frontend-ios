@@ -10,10 +10,10 @@
 #import <CoreData/CoreData.h>
 
 #import "Room.h"
+#import "RoomDetailViewController.h"
 
-@interface RoomViewController : UIViewController <UITableViewDataSource>
+@interface RoomViewController : UITableViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) Room *room;
 
 @end

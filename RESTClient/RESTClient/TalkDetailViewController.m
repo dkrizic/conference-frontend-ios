@@ -47,4 +47,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    RoomDetailViewController *detail = [segue destinationViewController];
+    detail.room = talk.room;
+}
+
 @end

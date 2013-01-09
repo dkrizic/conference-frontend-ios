@@ -12,7 +12,7 @@
 #import "Talk.h"
 #import "Room.h"
 
-@interface TalkViewController : UIViewController <UITableViewDataSource>
+@interface TalkViewController : UITableViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 

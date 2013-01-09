@@ -14,7 +14,7 @@
 
 @implementation RoomViewController
 
-@synthesize managedObjectContext, room;
+@synthesize managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -65,6 +65,15 @@
     [request setEntity:entity];
     NSArray *rooms = [managedObjectContext executeFetchRequest:request error:nil];
     return rooms;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSInteger selectedRow = [[self tableView] indexPathForSelectedRow].row;
+    NSArray *rooms = [self readAllRooms];
+    Room *room = (Room *) [rooms objectAtIndex:selectedRow];
+    RoomDetailViewController *detail = [segue destinationViewController];
+    detail.room = room;
 }
 
 @end

@@ -11,6 +11,7 @@
 #import "Talk.h"
 #import "Room.h"
 #import "Speaker.h"
+#import "RoomDetailViewController.h"
 
 @interface TalkDetailViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UITableViewCell *talkName;
